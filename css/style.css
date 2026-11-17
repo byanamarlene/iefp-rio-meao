@@ -1,0 +1,83 @@
+/* Paleta, temas e tipografia */
+:root {
+    color-scheme: light;
+    --fundo: #f4f9f5;
+    --superficie: #ffffff;
+    --texto: #10281c;
+    --texto-secundario: #465e50;
+    --destaque: #005b31;
+    --verde: #006a3a;
+    --verde-hover: #004d2a;
+    --sobre-verde: #fff;
+    --verde-suave: #e1f2e6;
+    --contorno: #b7d1bf;
+    --foco: #137d43;
+    --verde-floresta: #082a1c;
+    --sobre-floresta: #f6fff8;
+    --verde-claro: #a6e5ae;
+    --fonte-titulos: "Bricolage Grotesque", Arial, sans-serif;
+    --fonte-texto: "Inter", Arial, sans-serif;
+    --raio: 0.8rem;
+}
+
+html:has(#modo-noturno:checked) {
+    color-scheme: dark;
+    --fundo: #10271d;
+    --superficie: #173527;
+    --texto: #effaf1;
+    --texto-secundario: #c2d8c7;
+    --destaque: #a6e5ae;
+    --verde: #a6e5ae;
+    --verde-hover: #c8efcb;
+    --sobre-verde: #082a1c;
+    --verde-suave: #214735;
+    --contorno: #587c65;
+    --foco: #a6e5ae;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font: 1rem/1.6 var(--fonte-texto);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--texto);
+    font-family: var(--fonte-titulos);
+    font-weight: 800;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    max-width: 12.5ch;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.75rem, 5.4vw, 6.1rem);
+    letter-spacing: -0.045em;
+}
+
+h2 {
+    font-size: clamp(2rem, 4.5vw, 3.55rem);
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+a {
+    text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+    outline: 2px solid var(--foco);
+    outline-offset: 4px;
+}
+
+figcaption {
+    margin-top: 0.55rem;
+    color: var(--texto-secundario);
+    font-size: 0.81rem;
+}

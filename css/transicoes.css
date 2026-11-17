@@ -1,0 +1,94 @@
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(0.85rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entrada-foto {
+    from {
+        opacity: 0;
+        transform: translateX(0.8rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .abertura-texto {
+        animation: entrada 550ms ease-out both;
+    }
+
+    .foto-abertura {
+        animation: entrada-foto 620ms ease-out 110ms both;
+    }
+
+    .cursos-grelha > .col {
+        animation: entrada 320ms ease-out both;
+    }
+
+    .ficha-curso[open] > p,
+    .ficha-evento[open] .evento-detalhe,
+    .local-mapa[open] .morada-mapa {
+        animation: entrada 230ms ease-out both;
+    }
+
+    body, .cabecalho, .rodape, .painel, .passos-formacao li,
+    .noticia, .evento, .visita-painel, .caixa-contacto,
+    .formulario, .form-control, .seletores label > span {
+        transition:
+            background-color 250ms ease-in-out,
+            color 250ms ease-in-out,
+            border-color 250ms ease-in-out;
+    }
+
+    .botao {
+        transition:
+            transform 180ms ease-out,
+            background-color 180ms ease-out,
+            color 250ms ease-in-out;
+    }
+
+    .botao:hover {
+        transform: translateY(-2px);
+    }
+
+    .cartao-curso {
+        transition:
+            border-color 220ms ease-in-out,
+            box-shadow 220ms ease-in-out,
+            background-color 250ms ease-in-out;
+    }
+
+    .curso-imagem img, .noticia-imagem img,
+    .evento-media img, .galeria-imagem img {
+        transition: transform 420ms ease-out;
+    }
+
+    .cartao-curso:hover .curso-imagem img,
+    .cartao-curso:focus-within .curso-imagem img,
+    .noticia:hover .noticia-imagem img,
+    .noticia:focus-within .noticia-imagem img,
+    .evento:hover .evento-media img,
+    .evento:focus-within .evento-media img,
+    .galeria-centro figure:hover .galeria-imagem img,
+    .galeria-centro figure:focus-within .galeria-imagem img {
+        transform: scale(1.055);
+    }
+
+    .mapa-janela > img {
+        transition: transform 430ms ease-in-out;
+    }
+
+    .cabecalho .menu a {
+        transition: text-decoration-color 180ms ease-out;
+    }
+}

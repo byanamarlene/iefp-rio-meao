@@ -1,0 +1,285 @@
+/* Texto auxiliar e ligações */
+.introducao {
+    max-width: 62ch;
+    color: var(--texto-secundario);
+}
+
+.meta, .rotulo {
+    color: var(--texto-secundario);
+}
+
+.rotulo {
+    margin-bottom: 0.55rem;
+    font-size: 0.77rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.ligacao {
+    color: var(--destaque);
+    font-weight: 700;
+}
+
+.ligacao:hover {
+    color: var(--destaque);
+    text-decoration-thickness: 2px;
+}
+
+.ligacao-seccao {
+    margin: 1rem 0 0;
+}
+
+/* Botões */
+.botao {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--raio);
+    background: var(--verde);
+    color: var(--sobre-verde);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: var(--verde-hover);
+    color: var(--sobre-verde);
+}
+
+.botao-claro {
+    background: var(--verde-claro);
+    color: var(--verde-floresta);
+}
+
+.botao-claro:hover {
+    background: #cdf1d2;
+    color: var(--verde-floresta);
+}
+
+.ligacao-clara, .ligacao-clara:hover {
+    color: var(--sobre-floresta);
+}
+
+.abertura :focus-visible {
+    outline-color: var(--verde-claro);
+}
+
+/* Filtros da oferta formativa */
+.seletores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    min-width: 0;
+    margin: 0.9rem 0 1.25rem;
+}
+
+.seletores label {
+    position: relative;
+    cursor: pointer;
+}
+
+.seletores label > span, .controlo-mapa {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--contorno);
+    border-radius: var(--raio);
+    background: var(--superficie);
+    color: var(--texto);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.seletores input:checked + span {
+    border-color: var(--verde);
+    background: var(--verde);
+    color: var(--sobre-verde);
+}
+
+.seletores input:focus-visible + span {
+    outline: 2px solid var(--foco);
+    outline-offset: 3px;
+}
+
+#formacoes:has(#curso-digital:checked) [data-area]:not([data-area="digital"]),
+#formacoes:has(#curso-comercio:checked) [data-area]:not([data-area="comercio"]),
+#formacoes:has(#curso-industria:checked) [data-area]:not([data-area="industria"]) {
+    display: none;
+}
+
+/* Cartões dos cursos */
+.cartao-curso, .formulario {
+    border: 1px solid var(--contorno);
+    border-radius: var(--raio);
+    background: var(--superficie);
+}
+
+.cartao-curso {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cartao-curso:hover,
+.cartao-curso:focus-within {
+    border-color: var(--destaque);
+    box-shadow: 0 0.5rem 1.3rem #082a1c22;
+}
+
+.curso-imagem {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background: var(--verde-suave);
+}
+
+.curso-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+}
+
+.curso-corpo {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+}
+
+.curso-corpo .rotulo {
+    color: var(--destaque);
+}
+
+.curso-corpo .meta {
+    margin-bottom: 0.65rem;
+    font-size: 0.85rem;
+}
+
+.ficha-curso {
+    margin-top: auto;
+    border-top: 1px solid var(--contorno);
+}
+
+.ficha-curso summary, .ficha-evento summary {
+    padding-block: 0.45rem;
+    color: var(--destaque);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ficha-curso[open] summary {
+    margin-bottom: 0.45rem;
+    border-bottom: 1px dashed var(--contorno);
+}
+
+.ficha-curso p {
+    margin-bottom: 0.65rem;
+}
+
+@media (max-width: 575.98px) {
+    .cartao-curso {
+        display: grid;
+        grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .curso-imagem img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    .curso-corpo {
+        padding: 0.65rem;
+    }
+}
+
+/* Caixas de contacto e redes sociais */
+.contactos-lista {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.caixa-contacto {
+    padding: 1rem;
+    border: 1px solid var(--contorno);
+    border-radius: var(--raio);
+    background: var(--verde-suave);
+}
+
+.contactos-lista dt {
+    font-weight: 700;
+}
+
+.contactos-lista dd {
+    margin: 0.35rem 0 0;
+}
+
+.contactos-lista dd span {
+    display: block;
+    color: var(--texto-secundario);
+}
+
+#redes-sociais {
+    margin-block: 1rem;
+}
+
+.redes-sociais a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--destaque);
+}
+
+.redes-sociais img {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0.17rem;
+    border-radius: 0.35rem;
+    background: #fff;
+    object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+    .contactos-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .caixa-contacto-larga {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Formulário */
+.formulario {
+    padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control, .form-control:focus {
+    border-color: var(--contorno);
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+.form-control:focus {
+    outline: 2px solid var(--foco);
+    outline-offset: 2px;
+    box-shadow: none;
+}

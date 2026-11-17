@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projeto académico de redesign do Serviço de Formação Profissional de Rio Meão.">
+    <title>IEFP Rio Meão | Formação profissional</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navegacao.css">
+    <link rel="stylesheet" href="css/seccoes.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/transicoes.css">
+</head>
+
+<body id="inicio">
+    <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-interior">
+            <a class="marca" href="#inicio" aria-label="IEFP Rio Meão — voltar ao início">
+                <img class="logo-iefp" src="https://iefp.pt/image/company_logo?img_id=12309448&amp;t=1794829970165"
+                    width="356" height="76" alt="">
+                <span>Rio Meão</span>
+            </a>
+
+            <input type="checkbox" id="menu-movel" class="visually-hidden" aria-controls="menu-principal">
+            <label class="menu-movel" for="menu-movel">
+                <span aria-hidden="true">☰</span>
+                <span class="visually-hidden">Mostrar menu principal</span>
+            </label>
+
+            <nav id="menu-principal" class="navegacao-principal" aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#formacoes">Formações</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#estatisticas">Estatísticas</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <label class="controlo-tema" for="modo-noturno">
+                <input type="checkbox" id="modo-noturno">
+                Modo noturno
+            </label>
+        </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="abertura" aria-labelledby="titulo-pagina">
+            <div class="abertura-interior">
+                <div class="abertura-texto">
+                    <p class="rotulo">Serviço de Formação Profissional</p>
+                    <h1 id="titulo-pagina">Encontra a tua <em>próxima formação</em></h1>
+                    <p>Descobre as oportunidades de formação do IEFP Rio Meão.</p>
+
+                    <div class="acoes">
+                        <a class="botao botao-claro" href="#preparar">
+                            Explorar formações <span aria-hidden="true">→</span>
+                        </a>
+                        <a class="ligacao ligacao-clara" href="#localizacao">Como chegar ↗</a>
+                    </div>
+                </div>
+
+                <figure class="foto-abertura">
+                    <img src="https://iefp.pt/documents/10181/209813/SF%2BRMeao.jpg/6cbab745-905e-40cc-8227-6952406f6c7e?t=1396532399153"
+                        alt="Instalações do Serviço de Formação Profissional de Rio Meão" width="600" height="360"
+                        fetchpriority="high">
+                    <figcaption>Rio Meão <span>Fotografia do IEFP</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <div class="container conteudo-principal">
+            <!-- Sobre o centro -->
+            <section id="sobre" class="seccao" aria-labelledby="titulo-sobre">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-5">
+                        <h2 id="titulo-sobre">Sobre o centro</h2>
+                        <p>
+                            O Serviço de Formação Profissional de Rio Meão integra o Centro de
+                            Emprego e Formação Profissional de Entre Douro e Vouga, na Delegação
+                            Regional do Norte do IEFP.
+                        </p>
+
+                        <h3>Missão e objetivos</h3>
+                        <p>
+                            A formação profissional ajuda jovens e adultos a desenvolver
+                            competências, obter qualificações e preparar a entrada ou
+                            o regresso ao mercado de trabalho.
+                        </p>
+
+                        <a class="ligacao" href="https://iefp.pt/detalheservico?id=323697">
+                            Consultar a ficha oficial do centro ↗
+                        </a>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="galeria-centro">
+                            <figure>
+                                <div class="galeria-imagem">
+                                    <img src="https://images.pexels.com/photos/7742816/pexels-photo-7742816.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                        alt="Estudantes a trabalhar em portáteis numa sala de aula" width="800"
+                                        height="600" loading="lazy">
+                                </div>
+                                <figcaption>
+                                    Aprendizagem em sala · Imagem ilustrativa.
+                                    <a class="ligacao"
+                                        href="https://www.pexels.com/photo/students-busy-using-laptops-in-the-classroom-7742816/">
+                                        Alena Darmel, Pexels ↗
+                                    </a>
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <div class="galeria-imagem">
+                                    <img src="https://images.pexels.com/photos/27084603/pexels-photo-27084603.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                        alt="Profissional a trabalhar com ferramentas numa oficina" width="800"
+                                        height="600" loading="lazy">
+                                </div>
+                                <figcaption>
+                                    Trabalho em oficina · Imagem ilustrativa.
+                                    <a class="ligacao"
+                                        href="https://www.pexels.com/photo/man-sitting-and-working-in-workshop-27084603/">
+                                        HONG SON, Pexels ↗
+                                    </a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Explicação antes das ofertas -->
+            <section id="preparar" class="seccao painel" aria-labelledby="titulo-preparar">
+                <h2 id="titulo-preparar">Prepara o teu próximo passo</h2>
+
+                <ol class="passos-formacao">
+                    <li>
+                        <h3>Escolhe uma área</h3>
+                        <p>Usa os filtros para encontrares cursos na área que te interessa.</p>
+                    </li>
+                    <li>
+                        <h3>Compara os cursos</h3>
+                        <p>Vê a duração e o regime. Abre a ficha para saberes o que vais aprender.</p>
+                    </li>
+                    <li>
+                        <h3>Consulta o IEFPonline</h3>
+                        <p>Confirma as datas, a disponibilidade e as condições de acesso.</p>
+                    </li>
+                </ol>
+
+                <a class="botao" href="#formacoes">Ver oferta formativa ↓</a>
+            </section>
+
+            <!-- Oferta formativa -->
+            <section id="formacoes" class="seccao" aria-labelledby="titulo-formacoes">
+                <h2 id="titulo-formacoes">Oferta formativa</h2>
+                <p class="introducao">
+                    Uma seleção de ações publicadas pelo IEFP Rio Meão.
+                    As fotografias dos cursos são ilustrativas.
+                </p>
+
+                <fieldset class="seletores">
+                    <legend class="visually-hidden">Filtrar oferta formativa por área</legend>
+
+                    <label>
+                        <input type="radio" name="filtro-cursos" id="curso-todos" class="visually-hidden" checked>
+                        <span>Todos</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="filtro-cursos" id="curso-digital" class="visually-hidden">
+                        <span>Informática</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="filtro-cursos" id="curso-comercio" class="visually-hidden">
+                        <span>Comércio</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="filtro-cursos" id="curso-industria" class="visually-hidden">
+                        <span>Metalomecânica</span>
+                    </label>
+                </fieldset>
+
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3 cursos-grelha">
+                    <div class="col" data-area="digital">
+                        <article class="cartao-curso">
+                            <figure class="curso-imagem">
+                                <img src="https://images.pexels.com/photos/36496927/pexels-photo-36496927/free-photo-of-close-up-of-programmer-typing-code-on-laptop.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                    width="800" height="500" alt="Programador a trabalhar num portátil" loading="lazy">
+                            </figure>
+
+                            <div class="curso-corpo">
+                                <p class="rotulo">Ciências informáticas</p>
+                                <h3>Técnico de Desenvolvimento de Software</h3>
+                                <p class="meta"><strong>3 525 horas</strong> · Presencial</p>
+
+                                <details class="ficha-curso">
+                                    <summary>Ver detalhes da formação</summary>
+                                    <p>Curso de aprendizagem com programação, redes informáticas e formação em contexto
+                                        de trabalho.</p>
+                                    <a class="ligacao"
+                                        href="https://iefponline.iefp.pt/IEFP/pesquisas/IEFP/pesquisas/detalheOfertasFormacao.do?idFormacao=288807&amp;isPesq=true&amp;nav=true&amp;posAbs=6"
+                                        aria-label="Saber mais sobre Técnico de Desenvolvimento de Software">
+                                        Saber mais ↗
+                                    </a>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col" data-area="comercio">
+                        <article class="cartao-curso">
+                            <figure class="curso-imagem">
+                                <img src="https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                    width="800" height="500" alt="Trabalhadores a manusear uma encomenda num armazém"
+                                    loading="lazy">
+                            </figure>
+
+                            <div class="curso-corpo">
+                                <p class="rotulo">Comércio</p>
+                                <h3>Operador de Logística</h3>
+                                <p class="meta"><strong>50 horas</strong> · A distância</p>
+
+                                <details class="ficha-curso">
+                                    <summary>Ver detalhes da formação</summary>
+                                    <p>Ação modular sobre relacionamento interpessoal, organização pessoal e gestão do
+                                        tempo.</p>
+                                    <a class="ligacao"
+                                        href="https://iefponline.iefp.pt/IEFP/pesquisas/detalheOfertasFormacao.do?idFormacao=288508"
+                                        aria-label="Saber mais sobre Operador de Logística">
+                                        Saber mais ↗
+                                    </a>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col" data-area="industria">
+                        <article class="cartao-curso">
+                            <figure class="curso-imagem">
+                                <img src="https://images.pexels.com/photos/8195876/pexels-photo-8195876.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                    width="800" height="500" alt="Profissional com máscara de proteção a soldar metal"
+                                    loading="lazy">
+                            </figure>
+
+                            <div class="curso-corpo">
+                                <p class="rotulo">Metalurgia e metalomecânica</p>
+                                <h3>Soldador/a</h3>
+                                <p class="meta"><strong>175 horas</strong> · Presencial</p>
+
+                                <details class="ficha-curso">
+                                    <summary>Ver detalhes da formação</summary>
+                                    <p>Prática de soldadura em chapa, desenho de construções soldadas e segurança no
+                                        trabalho.</p>
+                                    <a class="ligacao"
+                                        href="https://iefponline.iefp.pt/IEFP/pesquisas/IEFP/pesquisas/detalheOfertasFormacao.do?idFormacao=288634&amp;isPesq=true&amp;nav=true&amp;posAbs=9"
+                                        aria-label="Saber mais sobre a formação de Soldador ou Soldadora">
+                                        Saber mais ↗
+                                    </a>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col" data-area="industria">
+                        <article class="cartao-curso">
+                            <figure class="curso-imagem">
+                                <img src="https://images.pexels.com/photos/34207359/pexels-photo-34207359/free-photo-of-industrial-robot-arm-in-a-manufacturing-facility.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
+                                    width="800" height="500" alt="Braço robótico numa instalação industrial"
+                                    loading="lazy">
+                            </figure>
+
+                            <div class="curso-corpo">
+                                <p class="rotulo">Metalurgia e metalomecânica</p>
+                                <h3>Técnico Especialista em Automação, Robótica e Manutenção Industrial</h3>
+                                <p class="meta"><strong>1 518 horas</strong> · Presencial</p>
+
+                                <details class="ficha-curso">
+                                    <summary>Ver detalhes da formação</summary>
+                                    <p>Formação em programação de robôs e autómatos, sistemas mecatrónicos e diagnóstico
+                                        de avarias.</p>
+                                    <a class="ligacao"
+                                        href="https://iefponline.iefp.pt/IEFP/pesquisas/detalheOfertasFormacao.do?idFormacao=283870&amp;isPesq=true&amp;nav=true&amp;posAbs=9"
+                                        aria-label="Saber mais sobre Automação, Robótica e Manutenção Industrial">
+                                        Saber mais ↗
+                                    </a>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <p class="ligacao-seccao">
+                    <a class="ligacao"
+                        href="https://iefponline.iefp.pt/IEFP/pesquisas/search.do?cat=ofertaFormacao&amp;ccentro=195">
+                        Consultar todas as formações de Rio Meão no IEFPonline ↗
+                    </a>
+                </p>
+            </section>
+
+            <div class="atualidade">
+                <!-- Notícias -->
+                <section id="noticias" class="seccao" aria-labelledby="titulo-noticias">
+                    <h2 id="titulo-noticias">Notícias</h2>
+
+                    <div class="lista-atualidade">
+                        <article class="noticia">
+                            <figure class="noticia-imagem">
+                                <img src="https://www.iefp.pt/documents/10181/12419974/Cooperacao%2BCabo%2BVerde.png/aef68284-da79-4c9e-8d77-ae0de5bfc8e3?t=1794842003110"
+                                    alt="Reunião com a delegação de Cabo Verde" width="960" height="640" loading="lazy">
+                            </figure>
+
+                            <div class="noticia-texto">
+                                <p class="meta"><time datetime="2026-11-12">12 de novembro de 2026</time> · Reunião</p>
+                                <h3>IEFP reúne com delegação de Cabo Verde</h3>
+                                <p>O encontro juntou representantes cabo-verdianos e o IEFP numa reunião de trabalho
+                                    sobre cooperação.</p>
+                                <a class="ligacao" href="https://www.iefp.pt/noticias?item=13843639"
+                                    aria-label="Ler notícia sobre a delegação de Cabo Verde">
+                                    Ler notícia ↗
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="noticia">
+                            <figure class="noticia-imagem">
+                                <img src="https://www.iefp.pt/documents/10181/8297578/Site%2BCapa%2BIEFP%2B%281296%2Bx%2B594%2Bpx%29%20%2831%29.jpg/a12dad41-06aa-4a83-9fae-adc43a61ae80?t=1794408268507"
+                                    alt="Imagem da notícia sobre a cooperação com a República da Coreia" width="960"
+                                    height="640" loading="lazy">
+                            </figure>
+
+                            <div class="noticia-texto">
+                                <p class="meta"><time datetime="2026-11-11">11 de novembro de 2026</time> · Publicação
+                                </p>
+                                <h3>Portugal e Coreia trocam experiências de formação</h3>
+                                <p>O centro do IEFP em Setúbal recebeu uma delegação da República da Coreia para
+                                    partilhar práticas de qualificação profissional.</p>
+                                <a class="ligacao" href="https://www.iefp.pt/noticias?item=13837807"
+                                    aria-label="Ler notícia sobre a cooperação com a República da Coreia">
+                                    Ler notícia ↗
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="noticia">
+                            <figure class="noticia-imagem">
+                                <img src="https://www.iefp.pt/documents/10181/12419974/coopera%C3%A7%C3%A3o_stp2026.jpg/fb5d2762-b42d-4a2c-b214-508d787d21f7?t=1794842114620"
+                                    alt="Fotografia da missão técnica a São Tomé e Príncipe" width="960" height="640"
+                                    loading="lazy">
+                            </figure>
+
+                            <div class="noticia-texto">
+                                <p class="meta">
+                                    <time datetime="2026-11-01">1</time> a
+                                    <time datetime="2026-11-07">7 de novembro de 2026</time> · Missão
+                                </p>
+                                <h3>IEFP realiza missão técnica em São Tomé e Príncipe</h3>
+                                <p>A missão integrou uma parceria de assistência técnica ao centro de formação
+                                    profissional são-tomense.</p>
+                                <a class="ligacao" href="https://www.iefp.pt/noticias?item=13839627"
+                                    aria-label="Ler notícia sobre a missão a São Tomé e Príncipe">
+                                    Ler notícia ↗
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="ligacao-seccao">
+                        <a class="ligacao" href="https://www.iefp.pt/noticias">Ver mais notícias ↗</a>
+                    </p>
+                </section>
+
+                <!-- Eventos -->
+                <section id="eventos" class="seccao" aria-labelledby="titulo-eventos">
+                    <h2 id="titulo-eventos">Eventos</h2>
+
+                    <div class="lista-atualidade">
+                        <article class="evento">
+                            <figure class="evento-media">
+                                <a href="https://worldskills.org/application/files/5317/3270/8247/portugal-national-comp2024-1.jpg"
+                                    target="_blank" rel="noopener"
+                                    aria-label="Abrir a fotografia da prova de eletrónica numa nova aba">
+                                    <img src="https://worldskills.org/application/files/5317/3270/8247/portugal-national-comp2024-1.jpg"
+                                        alt="Participante numa prova de eletrónica da WorldSkills Portugal" width="900"
+                                        height="600">
+                                </a>
+                                <figcaption>Arquivo WorldSkills · 2024</figcaption>
+                            </figure>
+
+                            <div class="evento-corpo">
+                                <p class="data-evento">
+                                    <time datetime="2026-11-17">17</time> a
+                                    <time datetime="2026-11-19">19 de novembro de 2026</time>
+                                </p>
+                                <h3>WorldSkills Portugal · Fase regional</h3>
+
+                                <details class="ficha-evento">
+                                    <summary>Informação do evento</summary>
+                                    <div class="evento-detalhe">
+                                        <p>Provas regionais de seleção para o Campeonato Nacional das Profissões.</p>
+                                        <a class="ligacao"
+                                            href="https://worldskillsportugal.iefp.pt/wsp_noticia/campeonato-nacional-das-profissoes-provas-regionais-abrem-portas-ao-publico-de-17-a-19-de-novembro/">
+                                            Consultar evento ↗
+                                        </a>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+
+                        <article class="evento">
+                            <figure class="evento-media evento-media-cartaz">
+                                <a href="https://www.iefp.pt/documents/10181/445846/EURES_EUROPEANJOB%2BDAYS.png/c9fa658a-562e-419e-b473-cda4fbf03731?t=1793633046467"
+                                    target="_blank" rel="noopener"
+                                    aria-label="Abrir imagem de Work in Portugal numa nova aba">
+                                    <img src="https://www.iefp.pt/documents/10181/445846/EURES_EUROPEANJOB%2BDAYS.png/c9fa658a-562e-419e-b473-cda4fbf03731?t=1793633046467"
+                                        alt="Imagem oficial de divulgação de Work in Portugal" width="900" height="420">
+                                </a>
+                            </figure>
+
+                            <div class="evento-corpo">
+                                <p class="data-evento">
+                                    <time datetime="2026-11-20">20 de novembro de 2026</time>
+                                </p>
+                                <h3>Work in Portugal</h3>
+
+                                <details class="ficha-evento">
+                                    <summary>Informação do evento</summary>
+                                    <div class="evento-detalhe">
+                                        <p>Feira de recrutamento online organizada pelo IEFP no âmbito da rede EURES.
+                                        </p>
+                                        <a class="ligacao" href="https://www.iefp.pt/noticias?item=13824390">
+                                            Consultar evento ↗
+                                        </a>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+
+                        <article class="evento">
+                            <figure class="evento-media">
+                                <a href="https://worldskills.org/application/files/thumbnails/large/8817/3270/8316/portugal-national-comp2024-2.jpg"
+                                    target="_blank" rel="noopener"
+                                    aria-label="Abrir fotografia do campeonato de 2024 numa nova aba">
+                                    <img src="https://worldskills.org/application/files/thumbnails/large/8817/3270/8316/portugal-national-comp2024-2.jpg"
+                                        alt="Duas participantes no Campeonato Nacional das Profissões de 2024"
+                                        width="900" height="600">
+                                </a>
+                                <figcaption>Arquivo WorldSkills · 2024</figcaption>
+                            </figure>
+
+                            <div class="evento-corpo">
+                                <p class="data-evento">
+                                    <time datetime="2027-02-23">23</time> a
+                                    <time datetime="2027-02-27">27 de fevereiro de 2027</time>
+                                </p>
+                                <h3>Campeonato Nacional das Profissões</h3>
+
+                                <details class="ficha-evento">
+                                    <summary>Informação do evento</summary>
+                                    <div class="evento-detalhe">
+                                        <p>A 47.ª edição reúne em Aveiro jovens concorrentes de todo o país. A entrada é
+                                            gratuita.</p>
+                                        <a class="ligacao"
+                                            href="https://worldskillsportugal.iefp.pt/o-que-fazemos/cnp/">
+                                            Consultar evento ↗
+                                        </a>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="ligacao-seccao">
+                        <a class="ligacao" href="https://www.iefp.pt/eventos">Ver todos os eventos ↗</a>
+                    </p>
+                </section>
+            </div>
+
+            <!-- Estatísticas -->
+            <section id="estatisticas" class="seccao painel" aria-labelledby="titulo-estatisticas">
+                <h2 id="titulo-estatisticas">Estatísticas de emprego</h2>
+                <p>
+                    Consulta os relatórios mensais do mercado de emprego e a informação
+                    por região, concelho ou centro de emprego.
+                </p>
+                <a class="botao" href="https://www.iefp.pt/estatisticas">Ver estatísticas oficiais ↗</a>
+            </section>
+
+            <!-- Localização e Contactos -->
+            <div class="seccao visita">
+                <section id="localizacao" class="visita-painel" aria-labelledby="titulo-localizacao">
+                    <h2 id="titulo-localizacao">Localização</h2>
+
+                    <address>
+                        <strong>Serviço de Formação Profissional de Rio Meão</strong><br>
+                        Avenida de Santiago, 88<br>
+                        4520-462 Rio Meão · Santa Maria da Feira
+                    </address>
+
+                    <p>
+                        Integra o Centro de Emprego e Formação Profissional de Entre Douro e Vouga,
+                        na Delegação Regional do Norte do IEFP.
+                    </p>
+
+                    <figure class="mapa">
+                        <div class="mapa-acoes">
+                            <label class="controlo-mapa" for="ampliar-mapa">
+                                <input type="checkbox" id="ampliar-mapa">
+                                Aproximar
+                            </label>
+                            <a class="ligacao"
+                                href="https://www.openstreetmap.org/?mlat=40.959358&amp;mlon=-8.593725#map=16/40.959358/-8.593725">
+                                Abrir mapa interativo ↗
+                            </a>
+                        </div>
+
+                        <div class="mapa-janela">
+                            <img src="https://tile.openstreetmap.org/15/15601/12290.png"
+                                alt="Mapa da zona do Serviço de Formação Profissional de Rio Meão" width="256"
+                                height="256" loading="lazy">
+
+                            <details class="local-mapa">
+                                <summary aria-label="Ver informações do IEFP Rio Meão">×</summary>
+                                <div class="morada-mapa">
+                                    <strong>IEFP Rio Meão</strong>
+                                    <p>Avenida de Santiago, 88</p>
+                                    <a class="ligacao"
+                                        href="https://www.openstreetmap.org/?mlat=40.959358&amp;mlon=-8.593725#map=16/40.959358/-8.593725">
+                                        Ver localização ↗
+                                    </a>
+                                </div>
+                            </details>
+                        </div>
+
+                        <figcaption>
+                            O marcador abre a ficha do local.
+                            <a class="ligacao" href="https://www.openstreetmap.org/copyright">
+                                © Contribuidores do OpenStreetMap
+                            </a>
+                        </figcaption>
+                    </figure>
+
+                    <p class="coordenadas"><strong>Coordenadas GPS</strong> 40.959358, −8.593725</p>
+                    <a class="ligacao" href="https://iefp.pt/detalheservico?id=323697">
+                        Ver ficha oficial de Rio Meão ↗
+                    </a>
+                </section>
+
+                <section id="contactos" class="visita-painel" aria-labelledby="titulo-contactos">
+                    <h2 id="titulo-contactos">Contactos</h2>
+
+                    <dl class="contactos-lista">
+                        <div class="caixa-contacto">
+                            <dt>IEFP Rio Meão</dt>
+                            <dd>
+                                <a class="ligacao" href="tel:+351256029700">256 029 700</a>
+                                <span>Atendimento das 09h00 às 18h00</span>
+                            </dd>
+                        </div>
+
+                        <div class="caixa-contacto">
+                            <dt>Centro de Contacto do IEFP</dt>
+                            <dd>
+                                <a class="ligacao" href="tel:+351215803555">215 803 555</a>
+                                <span>Dias úteis, das 09h00 às 19h00</span>
+                            </dd>
+                        </div>
+
+                        <div class="caixa-contacto caixa-contacto-larga">
+                            <dt>Pedido online</dt>
+                            <dd>
+                                <a class="ligacao" href="https://iefponline.iefp.pt/">Abrir o IEFPonline ↗</a>
+                                <span>Na página inicial, escolhe «Contactar o IEFP».</span>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <section id="redes-sociais" class="caixa-contacto" aria-labelledby="titulo-redes">
+                        <h3 id="titulo-redes">Redes sociais do IEFP</h3>
+
+                        <ul class="menu redes-sociais">
+                            <li>
+                                <a href="https://www.facebook.com/iefp.pt/">
+                                    <img src="https://www.iefp.pt/Events-portlet/images/if_square-facebook_317727.svg"
+                                        width="20" height="20" alt="">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCTfurXy2KHH6heIaqb7mjrA">
+                                    <img src="https://www.iefp.pt/Events-portlet/images/if_youtube_317714.svg"
+                                        width="20" height="20" alt="">
+                                    YouTube
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/iefp_portugal/">
+                                    <img src="https://www.iefp.pt/Events-portlet/images/insta_color.svg" width="20"
+                                        height="20" alt="">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/company/iefp-instituto-do-emprego-e-forma%C3%A7%C3%A3o-profissional">
+                                    <img src="https://www.iefp.pt/Events-portlet/images/linkedin-color.svg" width="20"
+                                        height="20" alt="">
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <form class="formulario" action="#contactos" method="get" aria-labelledby="titulo-formulario"
+                        aria-describedby="aviso-formulario">
+                        <h3 id="titulo-formulario">Enviar uma mensagem</h3>
+                        <p id="aviso-formulario">
+                            Formulário de demonstração. Usa dados fictícios.
+                            Para contactar o centro, usa os canais oficiais acima.
+                        </p>
+
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input id="nome" type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" type="email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label">Assunto</label>
+                            <input id="assunto" type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea id="mensagem" rows="4" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="botao">Enviar</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grelha">
+                <div>
+                    <h2>IEFP Rio Meão</h2>
+                    <p>Serviço de Formação Profissional</p>
+                </div>
+
+                <nav class="rodape-links" aria-label="Ligações úteis">
+                    <h3>Ligações úteis</h3>
+                    <ul class="menu">
+                        <li><a href="#formacoes">Oferta formativa</a></li>
+                        <li><a href="#localizacao">Localização</a></li>
+                        <li><a href="#contactos">Contactos</a></li>
+                        <li><a href="https://www.iefp.pt/">Site oficial do IEFP ↗</a></li>
+                    </ul>
+                </nav>
+
+                <a class="botao botao-claro rodape-topo" href="#inicio">
+                    Voltar ao início ↑
+                </a>
+            </div>
+
+            <div class="rodape-creditos">
+                <p>Projeto académico — website não oficial</p>
+                <p>Autoria de Marlene Silva</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

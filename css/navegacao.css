@@ -1,0 +1,249 @@
+/* Espaço reservado para o cabeçalho fixo */
+html {
+    --altura-cabecalho: 6rem;
+    scroll-padding-top: calc(var(--altura-cabecalho) + 1rem);
+}
+
+body {
+    padding-top: var(--altura-cabecalho);
+}
+
+.saltar {
+    position: fixed;
+    z-index: 30;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.65rem 0.95rem;
+    background: var(--superficie);
+    color: var(--destaque);
+    transform: translateY(-150%);
+}
+
+.saltar:focus {
+    transform: translateY(0);
+}
+
+.cabecalho, .rodape {
+    background: var(--verde-floresta);
+    color: var(--sobre-floresta);
+}
+
+.cabecalho {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 20;
+    border-bottom: 1px solid #487961;
+    box-shadow: 0 0.25rem 1rem #082a1c33;
+}
+
+.cabecalho-interior {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.7rem clamp(0.8rem, 2vw, 1.75rem);
+    min-height: calc(var(--altura-cabecalho) - 1px);
+    padding-block: 0.75rem;
+}
+
+.marca, .controlo-tema, .menu {
+    display: flex;
+    align-items: center;
+}
+
+.marca {
+    gap: 0.6rem;
+    color: inherit;
+    font: 800 1.5rem/1 var(--fonte-titulos);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.marca:hover {
+    color: var(--sobre-floresta);
+}
+
+.logo-iefp {
+    width: clamp(7rem, 11vw, 10rem);
+    height: auto;
+    padding: 0.25rem 0.4rem;
+    border-radius: 0.45rem;
+    background: #fff;
+}
+
+.menu {
+    flex-wrap: wrap;
+    gap: 0.2rem 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.menu a {
+    display: inline-block;
+    padding-block: 0.3rem;
+    color: inherit;
+}
+
+.navegacao-principal .menu {
+    justify-content: center;
+    gap: 0.2rem clamp(0.55rem, 1.3vw, 1.2rem);
+    font-size: 0.95rem;
+}
+
+.cabecalho .menu a {
+    padding-block: 0.5rem;
+    white-space: nowrap;
+    text-decoration-color: transparent;
+}
+
+.cabecalho .menu a:hover,
+.cabecalho .menu a:focus-visible {
+    text-decoration-color: var(--verde-claro);
+}
+
+.controlo-tema {
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0.38rem 0.55rem;
+    border: 1px solid #829589;
+    border-radius: var(--raio);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.controlo-tema input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--verde-claro);
+}
+
+.cabecalho :focus-visible,
+.rodape :focus-visible {
+    outline-color: var(--verde-claro);
+}
+
+#menu-movel, .menu-movel {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    html {
+        --altura-cabecalho: 7.5rem;
+    }
+
+    html:has(#menu-movel:checked) {
+        scroll-padding-top: calc(var(--altura-cabecalho) + 7rem);
+    }
+
+    .cabecalho-interior {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.5rem 0.75rem;
+    }
+
+    .cabecalho .marca {
+        font-size: 1.25rem;
+    }
+
+    #menu-movel {
+        display: block;
+    }
+
+    .menu-movel {
+        display: grid;
+        min-width: 44px;
+        min-height: 44px;
+        place-items: center;
+        border: 1px solid #7a9b87;
+        border-radius: 0.45rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    #menu-movel:focus-visible + .menu-movel {
+        outline: 2px solid var(--verde-claro);
+        outline-offset: 3px;
+    }
+
+    #menu-movel:checked + .menu-movel {
+        background: var(--verde-claro);
+        color: var(--verde-floresta);
+    }
+
+    .navegacao-principal {
+        display: none;
+        grid-column: 1 / -1;
+        max-height: 45vh;
+        overflow-y: auto;
+        padding: 0.35rem;
+        border-block: 1px solid #487961;
+    }
+
+    #menu-movel:checked ~ nav {
+        display: block;
+    }
+
+    .navegacao-principal .menu {
+        justify-content: flex-start;
+    }
+
+    .controlo-tema {
+        justify-self: start;
+    }
+}
+
+/* Rodapé */
+.rodape {
+    padding-block: clamp(2rem, 5vw, 3.5rem) 1rem;
+    border-top: 4px solid var(--verde-claro);
+}
+
+.rodape h2, .rodape h3 {
+    color: inherit;
+}
+
+.rodape h2 {
+    font-size: 2rem;
+}
+
+.rodape p {
+    margin-bottom: 0.35rem;
+}
+
+.rodape-grelha {
+    display: grid;
+    gap: 1.6rem;
+    align-items: start;
+}
+
+.rodape-links h3 {
+    font-size: 1.05rem;
+}
+
+.rodape-links .menu {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.rodape-topo {
+    justify-self: start;
+}
+
+.rodape-creditos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+    margin-top: 1.75rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #487961;
+    color: #d2e8d7;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .rodape-grelha {
+        grid-template-columns: 1fr 1fr auto;
+    }
+}
